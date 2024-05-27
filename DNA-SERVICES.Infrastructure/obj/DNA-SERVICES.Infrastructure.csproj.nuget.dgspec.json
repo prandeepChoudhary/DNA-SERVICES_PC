@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Infrastructure/DNA-SERVICES.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Domain/DNA-SERVICES.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Domain/DNA-SERVICES.Domain.csproj",
+        "projectName": "DNA-SERVICES.Domain",
+        "projectPath": "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Domain/DNA-SERVICES.Domain.csproj",
+        "packagesPath": "/Users/prandeepchoudhary/.nuget/packages/",
+        "outputPath": "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/prandeepchoudhary/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Infrastructure/DNA-SERVICES.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Infrastructure/DNA-SERVICES.Infrastructure.csproj",
+        "projectName": "DNA-SERVICES.Infrastructure",
+        "projectPath": "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Infrastructure/DNA-SERVICES.Infrastructure.csproj",
+        "packagesPath": "/Users/prandeepchoudhary/.nuget/packages/",
+        "outputPath": "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/prandeepchoudhary/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Domain/DNA-SERVICES.Domain.csproj": {
+                "projectPath": "/Users/prandeepchoudhary/Projects/DNA-SERVICES/DNA-SERVICES.Domain/DNA-SERVICES.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.4.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

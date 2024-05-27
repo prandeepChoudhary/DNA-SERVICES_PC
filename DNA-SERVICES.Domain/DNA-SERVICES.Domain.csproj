@@ -14,8 +14,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Interfaces\" />
+    <None Remove="Interfaces\Repository\" />
+    <None Remove="Interfaces\Domain\" />
+    <None Remove="Services\" />
+    <None Remove="Models\" />
+    <None Remove="Models\FeeSchedule\" />
+    <None Remove="Models\FeeSchedule\Input\" />
+    <None Remove="Models\FeeSchedule\Output\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Repository\" />
+    <Folder Include="Interfaces\Domain\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\FeeSchedule\" />
+    <Folder Include="Models\FeeSchedule\Input\" />
+    <Folder Include="Models\FeeSchedule\Output\" />
   </ItemGroup>
 </Project>

@@ -21,6 +21,7 @@
     <None Remove="Models\FeeSchedule\" />
     <None Remove="Models\FeeSchedule\Input\" />
     <None Remove="Models\FeeSchedule\Output\" />
+    <None Remove="Common\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -31,5 +32,6 @@
     <Folder Include="Models\FeeSchedule\" />
     <Folder Include="Models\FeeSchedule\Input\" />
     <Folder Include="Models\FeeSchedule\Output\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>

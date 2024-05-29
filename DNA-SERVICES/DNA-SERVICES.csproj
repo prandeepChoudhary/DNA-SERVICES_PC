@@ -14,4 +14,23 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DNA-SERVICES.Application\DNA-SERVICES.Application.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\DNA-SERVICES.Contracts\DNA-SERVICES.Contracts.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\DNA-SERVICES.Infrastructure\DNA-SERVICES.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Configuration\" />
+    <None Remove="Configuration\DependencyInjection\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Configuration\DependencyInjection\" />
+  </ItemGroup>
 </Project>

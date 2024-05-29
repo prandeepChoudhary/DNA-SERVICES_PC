@@ -7,4 +7,21 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Input\" />
+    <None Remove="Output\" />
+    <None Remove="Input\FeeSchedules\" />
+    <None Remove="Output\FeeSchedules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Input\" />
+    <Folder Include="Output\" />
+    <Folder Include="Input\FeeSchedules\" />
+    <Folder Include="Output\FeeSchedules\" />
+  </ItemGroup>
 </Project>

@@ -7,4 +7,23 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DNA-SERVICES.Contracts\DNA-SERVICES.Contracts.csproj" />
+    <ProjectReference Include="..\DNA-SERVICES.Domain\DNA-SERVICES.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Helper\" />
+    <None Remove="Interface\" />
+    <None Remove="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
 </Project>

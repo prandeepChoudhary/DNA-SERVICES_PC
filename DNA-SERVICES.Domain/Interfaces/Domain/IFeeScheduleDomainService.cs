@@ -6,7 +6,7 @@ namespace DNA_SERVICES.Domain.Interfaces.Domain
 {
 	public interface IFeeScheduleDomainService
 	{
-        public Task<List<FeeScheduleOutputModel>> GetData(FeeScheduleInputModel feeScheduleInput);
+        public Task<List<FeeScheduleOutputModel>> GetData(FeeScheduleInputModel? feeScheduleInput);
     }
 }
 

@@ -32,7 +32,6 @@ namespace DNA_SERVICES.Infrastructure.Repository
         }
         public async Task<List<FeeScheduleOutputModel>> GetData(FeeScheduleInputModel feeScheduleInput)
         {
-            //List<string> lst = new();
             List<FeeScheduleOutputModel> lst = new();
             OracleConnection _conn = GetConnection();
             OracleDynamicParameters dynamicParameters = new OracleDynamicParameters();
@@ -61,7 +60,38 @@ namespace DNA_SERVICES.Infrastructure.Repository
                 _conn.Close();
                 _conn.Dispose();
             }
-            return (List<FeeScheduleOutputModel>)lst;
+            return lst;
+        }
+
+        public async Task<int> update (FeeScheduleInputModel feeScheduleInput)
+        {
+            int response = 0;
+            OracleConnection _conn = GetConnection();
+            try
+            {
+                OracleDynamicParameters dynamicParameters = new OracleDynamicParameters();
+                dynamicParameters.Add("p_fs_name", OracleDbType.Varchar2, System.Data.ParameterDirection.Input, feeScheduleInput.FeeScheduleName);
+                dynamicParameters.Add("p_fs_type", OracleDbType.Varchar2, System.Data.ParameterDirection.Input, feeScheduleInput.FeeScheduleType);
+                dynamicParameters.Add("p_cdt_ver", OracleDbType.RefCursor, System.Data.ParameterDirection.Output);
+                using (var objReader = await SqlMapper.ExecuteReaderAsync(_conn, DataContants.PROC_Update, param: dynamicParameters,
+                    commandType: System.Data.CommandType.StoredProcedure))
+                {
+                    if (dynamicParameters._oracleParameters[2].Value != null)
+                    {
+                        response = Convert.ToInt32(dynamicParameters._oracleParameters[2].Value.ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Error occurred in update. Message: " + ex.Message.ToString());
+            }
+            finally
+            {
+                _conn.Close();
+                _conn.Dispose();
+            }
+            return response;
         }
     }
 }

@@ -7,6 +7,7 @@ namespace DNA_SERVICES.Application.Interface
 	public interface IFeeScheduleService
 	{
         public Task<List<FeeScheduleOutput>> GetData(FeeScheduleInput feeScheduleInput);
+        public Task<FsCommonResponse> update(FeeScheduleInput feeScheduleInput);
     }
 }
 

@@ -32,6 +32,22 @@ namespace DNA_SERVICES.Domain.Services
             }
             return feeScheduleOutputModels;
         }
+
+        public async Task<int> update(FeeScheduleInputModel? feeScheduleInput)
+        {
+            int response = 0;
+            try
+            {
+                _logger.LogDebug("+FeeScheduleDomainServices.GetData");
+                response = await _iFeeScheduleRepository.update(feeScheduleInput);
+                _logger.LogDebug("-FeeScheduleDomainServices.GetData");
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError("Error Logger in Method : update, Message: " + ex.Message.ToString());
+            }
+            return response;
+        }
     }
 }
 

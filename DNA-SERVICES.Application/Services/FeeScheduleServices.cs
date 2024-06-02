@@ -41,6 +41,28 @@ namespace DNA_SERVICES.Application.Services
 			return lst;
 		}
 
+		public async Task<FsCommonResponse> update(FeeScheduleInput feeScheduleInput)
+		{
+			FsCommonResponse fsCommonResponse = new FsCommonResponse();
+			int response = 0;
+			try
+			{
+                _logger.LogInformation("FsServices.update+");
+				response = await _feeScheduleDomainService.update(_mapper.Map<FeeScheduleInput, FeeScheduleInputModel>(feeScheduleInput));
+				fsCommonResponse.Id = response;
+				fsCommonResponse.Action = "Update Fee Schedule";
+				if(response == 1)
+					fsCommonResponse.StatusMessage = "Successfull";
+				else
+					fsCommonResponse.StatusMessage = "failure";
+                _logger.LogInformation("FsServices.update-");
+            }
+			catch(Exception ex)
+			{
+                _logger.LogError("Log Error in FsServices.update, Message: " + ex.Message);
+            }
+			return fsCommonResponse;
+		}
     }
 }
 

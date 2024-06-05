@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.18" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,9 +29,15 @@
   <ItemGroup>
     <None Remove="Configuration\" />
     <None Remove="Configuration\DependencyInjection\" />
+    <None Remove="Configuration\Documentation\" />
+    <None Remove="Configuration\InfoHealthEndpoint\" />
+    <None Remove="Configuration\MIddleware\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configuration\" />
     <Folder Include="Configuration\DependencyInjection\" />
+    <Folder Include="Configuration\Documentation\" />
+    <Folder Include="Configuration\InfoHealthEndpoint\" />
+    <Folder Include="Configuration\MIddleware\" />
   </ItemGroup>
 </Project>
